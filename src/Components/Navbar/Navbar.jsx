@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="fixed z-[999] w-full px-20 py-8 font-['Neue Montreal'] flex justify-between items-center">
+    <div className="fixed z-50 w-full px-4 lg:px-20 py-4 lg:py-8 font-neue-montreal flex justify-between items-center">
       <div className="logo">
         <svg
-          width="150"
-          height="71.1"
+          width="120"
+          height="57"
           viewBox="0 0 484.1 71.1"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -27,17 +34,96 @@ function Navbar() {
           </g>
         </svg>
       </div>
-      <div className="links flex gap-10">
-        {["About", "Gallery", "Videos", "Presets", "contact"].map(
-          (item, index) => (
-            <a
+      <div className="hidden lg:block">
+        <div className="links flex gap-10">
+          {[
+            { name: "About", path: "/about" },
+            { name: "Gallery", path: "/gallery" },
+            { name: "Videos", path: "/videos" },
+            { name: "Presets", path: "/presets" },
+            { name: "Contact", path: "/contact" },
+          ].map((item, index) => (
+            <Link
               key={index}
-              className={`text-lg capitalize font-light ${index === 4 ? "ml-32" : ""}`}
+              to={item.path}
+              className={`text-lg capitalize font-regular ${
+                index === 4 ? "ml-6 lg:ml-32" : ""
+              }`}
             >
-              {item}
-            </a>
-          )
-        )}
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+      {/* Mobile Menu Button (Hidden on Desktop) */}
+      <div>
+        <button
+          className="block lg:hidden focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {/* Hamburger Icon */}
+          {!isOpen ? (
+            <svg
+              className="w-6 h-6 transition duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          ) : (
+            // Close Icon (X)
+            <svg
+              className="w-6 h-6 transform rotate-45 transition duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+      {/* Mobile Menu */}
+       {/* Mobile Menu */}
+      <div
+        className={`lg:hidden absolute top-20 left-0 w-full bg-white shadow-md transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition duration-300 ease-in-out`}
+      >
+        <div className="flex flex-col items-center pt-20 pb-4">
+          {[
+            { name: "About", path: "/about" },
+            { name: "Gallery", path: "/gallery" },
+            { name: "Videos", path: "/videos" },
+            { name: "Presets", path: "/presets" },
+            { name: "Contact", path: "/contact" },
+          ].map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className={`text-lg capitalize font-light py-2 w-full text-center transition duration-300 delay-75 ${
+                isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+              }`}
+              style={{ transitionDelay: `${index * 75 + 75}ms` }}
+              onClick={toggleMenu}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
