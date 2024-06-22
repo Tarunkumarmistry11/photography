@@ -10,7 +10,7 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 
 function App() {
   return (
-    <div>
+    <div className="w-full h-screen  text-white">
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
