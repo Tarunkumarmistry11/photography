@@ -99,7 +99,7 @@ function Navbar() {
       {/* Mobile Menu */}
        {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-20 left-0 w-full bg-zinc-800  transform ${
+        className={`lg:hidden absolute top-20 left-0 w-full h-screen border-[2px] border-zinc-700 bg-zinc-900  transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition duration-300 ease-in-out`}
       >
