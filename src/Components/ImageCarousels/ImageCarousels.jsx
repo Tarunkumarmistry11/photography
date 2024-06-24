@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,7 @@ const ImageCarousels = () => {
   }, []);
 
   return (
-    <article className="relative h-screen py-20 flex flex-col justify-center items-center font-['Founders_Grotesk']">
+    <article className="relative h-screen py-20 flex flex-col justify-center items-center font-['Founders_Grotesk'] overflow-hidden">
       <div className="flex justify-between w-full absolute top-0">
         <div 
           className="transform translate-x-[100%] relative z-40" // z-40 for stacking order
@@ -67,11 +68,13 @@ const ImageCarousels = () => {
                 <path d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z" fill="currentcolor"></path>
               </svg>
             </div>
-            <div className="inline-block bg-gray-200 text-black px-3 py-1 rounded-md">presets</div>
+            <div className="inline-block text-white px-3 py-1 rounded-full">Andaman Islands</div>
           </div>
           <div className="mb-4">
             <h2 className="text-5xl mb-2">Beach House</h2>
-            <a href="/stills/visit-greenland" className="inline-block px-4 py-2 bg-black text-white rounded-md">Click here</a>
+            <Link to="/presets">
+            <div  className="inline-block px-4 py-2 border-[1px] text-white rounded-full">Explore Presets</div>
+            </Link>
           </div>
           <div className="flex justify-center space-x-2">
             <div className="relative w-10 h-10">
