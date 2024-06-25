@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,26 +45,26 @@ const ImageCarousels = () => {
     animateImage(leftPhotoRef3, rightPhotoRef3);
   }, []);
 
+ 
   return (
     <div>
-      <div className='absolute text-5xl mt-4 px-4 font-["Founders_Grotesk"] rounded-full flex flex-col items-center w-1/2 left-1/2 transform -translate-x-1/2 mb-4'>Explore Presets</div>
       <article className="relative h-screen py-20 flex flex-col justify-center items-center font-['Founders_Grotesk'] overflow-hidden">
-        <div className="flex justify-between w-full absolute top-[15vh]">
-          <div 
+        <div className="flex justify-between w-full h-screen absolute  mb-4">
+          <div
             className="transform translate-x-[100%] relative z-40"
             ref={leftPhotoRef1}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3cc83822b06137a15c00_Header%201%20Left.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
             />
           </div>
-          <div 
+          <div
             className="transform translate-x-[-100%] relative z-50"
             ref={rightPhotoRef1}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3ccc6c2ce83328c9b669_Header%202%20Right.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
@@ -74,18 +74,33 @@ const ImageCarousels = () => {
         <div className="relative text-center mt-30">
           <div className="mb-4 flex flex-col items-center">
             <div className="mb-2">
-              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">Jan 2023</div>
+              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">
+                Jan 2023
+              </div>
               <div className="inline-block mx-2">
-                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z" fill="currentcolor"></path>
+                <svg
+                  width="16"
+                  height="8"
+                  viewBox="0 0 16 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"
+                    fill="currentcolor"
+                  ></path>
                 </svg>
               </div>
-              <div className="inline-block text-white px-3 py-1 rounded-full">Andaman Islands</div>
+              <div className="inline-block text-white px-3 py-1 rounded-full">
+                Andaman Islands
+              </div>
             </div>
             <div className="mb-4">
               <h2 className="text-5xl mb-2">Beach House</h2>
               <Link to="/presets">
-                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">Explore Presets</div>
+                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">
+                  Explore Presets
+                </div>
               </Link>
             </div>
             <div className="flex justify-center space-x-2">
@@ -113,21 +128,21 @@ const ImageCarousels = () => {
       </article>
       <article className="relative h-screen py-20 mt-[30vw] flex flex-col justify-center items-center font-['Founders_Grotesk'] overflow-hidden">
         <div className="flex justify-between w-full absolute top-0">
-          <div 
+          <div
             className="transform translate-x-[100%] relative z-40"
             ref={leftPhotoRef2}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3cc83822b06137a15c00_Header%201%20Left.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
             />
           </div>
-          <div 
+          <div
             className="transform translate-x-[-100%] relative z-50"
             ref={rightPhotoRef2}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3ccc6c2ce83328c9b669_Header%202%20Right.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
@@ -137,18 +152,33 @@ const ImageCarousels = () => {
         <div className="relative text-center mt-30">
           <div className="mb-4 flex flex-col items-center">
             <div className="mb-2">
-              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">Jan 2023</div>
+              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">
+                Jan 2023
+              </div>
               <div className="inline-block mx-2">
-                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z" fill="currentcolor"></path>
+                <svg
+                  width="16"
+                  height="8"
+                  viewBox="0 0 16 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"
+                    fill="currentcolor"
+                  ></path>
                 </svg>
               </div>
-              <div className="inline-block text-white px-3 py-1 rounded-full">Andaman Islands</div>
+              <div className="inline-block text-white px-3 py-1 rounded-full">
+                Andaman Islands
+              </div>
             </div>
             <div className="mb-4">
               <h2 className="text-5xl mb-2">Beach House</h2>
               <Link to="/presets">
-                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">Explore Presets</div>
+                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">
+                  Explore Presets
+                </div>
               </Link>
             </div>
             <div className="flex justify-center space-x-2">
@@ -176,21 +206,21 @@ const ImageCarousels = () => {
       </article>
       <article className="relative h-screen py-20 mt-[30vw] flex flex-col justify-center items-center font-['Founders_Grotesk'] overflow-hidden">
         <div className="flex justify-between w-full absolute top-0">
-          <div 
+          <div
             className="transform translate-x-[100%] relative z-40"
             ref={leftPhotoRef3}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3cc83822b06137a15c00_Header%201%20Left.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
             />
           </div>
-          <div 
+          <div
             className="transform translate-x-[-100%] relative z-50"
             ref={rightPhotoRef3}
           >
-            <img 
+            <img
               src="https://assets-global.website-files.com/60eeb025115a75902b86a796/647e3ccc6c2ce83328c9b669_Header%202%20Right.jpg"
               alt=""
               className="w-[35vw] h-auto rounded-3xl mt-[5vh]"
@@ -200,18 +230,33 @@ const ImageCarousels = () => {
         <div className="relative text-center mt-30">
           <div className="mb-4 flex flex-col items-center">
             <div className="mb-2">
-              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">Jan 2023</div>
+              <div className="inline-block bg-zinc-900 text-white px-3 py-1 rounded-md">
+                Jan 2023
+              </div>
               <div className="inline-block mx-2">
-                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z" fill="currentcolor"></path>
+                <svg
+                  width="16"
+                  height="8"
+                  viewBox="0 0 16 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 4L-8.26528e-07 8L-4.76837e-07 -6.99382e-07L16 4Z"
+                    fill="currentcolor"
+                  ></path>
                 </svg>
               </div>
-              <div className="inline-block text-white px-3 py-1 rounded-full">Andaman Islands</div>
+              <div className="inline-block text-white px-3 py-1 rounded-full">
+                Andaman Islands
+              </div>
             </div>
             <div className="mb-4">
               <h2 className="text-5xl mb-2">Beach House</h2>
               <Link to="/presets">
-                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">Explore Presets</div>
+                <div className="inline-block px-4 py-2 border-[1px] text-white rounded-full">
+                  Explore Presets
+                </div>
               </Link>
             </div>
             <div className="flex justify-center space-x-2">

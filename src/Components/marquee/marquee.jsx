@@ -18,7 +18,7 @@ const Marquee = () => {
       scrollTrigger: {
         trigger: marquee,
         start: 'top top',
-        end: 'bottom bottom', // Adjust end position to 'bottom bottom' or 'bottom top' based on your layout
+        end: 'bottom bottom', // Adjust end position based on your layout needs
         scrub: 10,
       },
     });
@@ -27,7 +27,7 @@ const Marquee = () => {
   return (
     <div className="w-full h-screen py-[15vh] bg-zinc-900">
       <div ref={marqueeRef} className="video-element w-full flex justify-center items-center">
-        <video ref={videoRef} className=" rounded-3xl max-w-8xl" controls loop autoPlay>
+        <video ref={videoRef} className="rounded-3xl max-w-8xl w-[90vw] h-auto overflow-hidden" controls loop autoPlay>
           <source
             src="https://ik.imagekit.io/eleven08/Website%20Assests/18512632-uhd_3840_2160_60fps.mp4?updatedAt=1719080887033"
             type="video/mp4"
