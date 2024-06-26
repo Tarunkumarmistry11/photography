@@ -16,12 +16,12 @@ function LandingPage() {
     borderRadius: "8px",
     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
     transformOrigin: "center",
-    transition: "transform 0.3s ease",
+    transition: "transform 0.2s ease",
     cursor: "pointer",
   };
 
   const handleHover = (event) => {
-    event.target.style.transform = "scale(1.9) rotate(6deg)";
+    event.target.style.transform = "scale(2.9) rotate(6deg)";
   };
 
   const handleHoverOut = (event) => {
@@ -46,12 +46,11 @@ function LandingPage() {
 
   return (
     <div className="w-full min-h-screen bg-zinc-900 pt-2 flex flex-col">
-      <div>
       <Marquee />
-      </div>
-      <div className="Intro-text-structure mt-40 px-20 flex justify-between items-center">
-        <div className="text-masker">
-          <h1 className="text-8xl font-['Founders_Grotesk']">
+
+      <div className="Intro-text-structure mt-20 md:mt-40 px-5 md:px-20 flex flex-col md:flex-row justify-between items-center">
+        <div className="text-masker mb-8 md:mb-0 md:mr-8">
+          <h1 className="text-4xl md:text-8xl font-['Founders_Grotesk']">
             From
             <img
               src={AndamanImage}
@@ -70,9 +69,12 @@ function LandingPage() {
               onMouseOver={handleHover}
               onMouseOut={handleHoverOut}
             />
-            where it all began <span ref={dotsRef} className="inline-block">
-              {['.', '.', '.'].map((dot, index) => (
-                <span key={index} className="inline-block">{dot}</span>
+            where it all began{" "}
+            <span ref={dotsRef} className="inline-block">
+              {[".", ".", "."].map((dot, index) => (
+                <span key={index} className="inline-block">
+                  {dot}
+                </span>
               ))}
             </span>
             <img
@@ -86,31 +88,33 @@ function LandingPage() {
           </h1>
         </div>
       </div>
+
       <div className="Read-more-button mt-8 text-center">
         <Link to="/About">
-          <button className="px-3 py-2 uppercase bg-zinc-900 border-2 font-['Founders_Grotesk'] text-white rounded-full shadow-lg hover:bg-zinc-800 transition-colors duration-300">
+          <button className="px-3 py-2  bg-zinc-900 border-[1px] font-['Founders_Grotesk'] text-white rounded-full shadow-lg hover:bg-zinc-100 hover:text-black transition-colors duration-300">
             Read my story
           </button>
         </Link>
       </div>
+
       <div className="border-t-[1px] border-zinc-800 mt-32"></div>
+
       <div className="mt-2 flex items-center space-x-2 justify-end">
         <Link to="/contact">
-          <h1 className="w-38 h-10 flex justify-between items-center px-4 py-2 border-2 border-zinc-500 font-regular capitalize font-['Founders_Grotesk'] rounded-full">
+          <h1 className="w-38 h-10 flex justify-between items-center px-4 py-2 border-2 border-zinc-500 font-regular capitalize font-['Founders_Grotesk'] hover:bg-zinc-100 hover:text-black rounded-full">
             Connect with me
           </h1>
         </Link>
         <Link to="/contact">
-          <div className="w-10 h-10 border-2 flex items-center justify-center border-zinc-500 rounded-full">
+          <div className="w-10 h-10 border-2 flex items-center justify-center border-zinc-500  hover:bg-zinc-100 hover:text-black rounded-full">
             <span className="rotate-[45deg]">
               <FaArrowUpLong />
             </span>
           </div>
         </Link>
       </div>
-      <div>
-        <ImageCarousels />
-      </div>
+
+      <ImageCarousels />
     </div>
   );
 }
