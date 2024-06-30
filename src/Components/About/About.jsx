@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Slider from './Slider';
+import HorizontalSlider from './HorizontalSlider/HorizontalSlider';
+import Intro from './Intro/intro';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,7 +88,12 @@ const About = () => {
           <h1>The symphony of nature, the earthy scent of grass, the whispering breeze carrying stories of old trees and fallen leaves, and above all, the lingering aroma of pure joy, forever etched in my heart. Growing up on the serene island of Andaman and Nicobar, I nurtured a deep, playful bond with nature..</h1>
         </div>
       </div>
-      <Slider />
+      <div>
+      <HorizontalSlider />
+      </div>
+      <div>
+        <Intro />
+      </div>
     </div>
   );
 }
