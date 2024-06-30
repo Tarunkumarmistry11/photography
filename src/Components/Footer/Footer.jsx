@@ -7,7 +7,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaYoutube } from 'react-i
 function Footer() {
     return (
         <footer className="bg-zinc-900 py-10">
-          <div className="container mx-auto px-4 flex flex-col items-center">
+          <div className="container mx-auto px-4 flex flex-col items-center over">
             <p className="text-gray-600">&copy; ELEVEN 2024</p>
             <div className="flex mt-4 space-x-4">
               <Link to={"/"} aria-label="Facebook">
