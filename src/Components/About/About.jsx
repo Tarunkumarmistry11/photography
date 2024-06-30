@@ -6,11 +6,13 @@ import Slider from './Slider';
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const AboutOneRef = useRef(null);
   const AboutRef = useRef(null);
   const videoRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
+    const AboutOverlayOne = AboutOneRef.current;
     const AboutOverlay = AboutRef.current;
     const videoOverlay = videoRef.current;
     const textOverlay = textRef.current;
@@ -27,12 +29,24 @@ const About = () => {
     gsap.to(AboutOverlay, {
       y: -100, // Example offset, adjust as needed
       opacity: 0, // Fade out effect
-      ease: 'power1.inOut',
+      ease: 'power1.Out',
       scrollTrigger: {
         trigger: AboutOverlay,
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 10,
+        scrub: true,
+      },
+    });
+
+    gsap.to(AboutOverlayOne, {
+      y: -100, // Example offset, adjust as needed
+      opacity: 0, // Fade out effect
+      ease: 'power1.Out',
+      scrollTrigger: {
+        trigger: AboutOverlay,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 5,
       },
     });
 
@@ -51,8 +65,8 @@ const About = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-zinc-900">
-      <div className="fixed top-[20vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full z-20">
-        <h1 ref={AboutRef} className="text-9xl font-bold font-['Founders_Grotesk']">Tarun</h1>
+      <div ref={AboutOneRef} className="fixed top-[20vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full z-10">
+        <h1  className="text-9xl font-bold font-['Founders_Grotesk']">Tarun</h1>
       </div>
       <div  ref={AboutRef} className="fixed top-[40vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
         <h1 className="text-9xl font-bold font-['Founders_Grotesk']">Mistry</h1>

@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
-    <div className="fixed z-50 w-full px-4 lg:px-20 py-4 lg:py-8 font-['neue-montreal'] flex justify-between items-center">
+    <div className="fixed z-50 w-full px-4 lg:px-20 py-4 lg:py-8 font-['Founders_Grotesk'] flex justify-between items-center">
       <div className="logo">
       <svg
           width="120"
