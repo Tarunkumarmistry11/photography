@@ -11,7 +11,8 @@ function Navbar() {
   return (
     <div className="fixed z-50 w-full px-4 lg:px-20 py-4 lg:py-8 font-['Founders_Grotesk'] flex justify-between items-center">
       <div className="logo">
-      <svg
+        <Link to={"/"}>
+      {/* <svg
           width="120"
           height="57"
           viewBox="0 0 484.1 71.1"
@@ -32,7 +33,9 @@ function Navbar() {
               vectorEffect="non-scaling-stroke"
             />
           </g>
-        </svg>
+        </svg> */}
+        <h1 className="text-4xl">ELEVEN</h1>
+        </Link>
       </div>
       <div className="hidden lg:block">
         <div className="links flex gap-10">
